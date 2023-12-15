@@ -1,0 +1,81 @@
+html{
+    font-size: 16px;
+}
+
+$primary-color:rgb(131, 175, 104);
+$secondary-color:rgb(0, 145, 255);
+$font-size-md: 1.5rem;
+$font-size-l: 2rem;
+
+@mixin center-children-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: $primary-color;
+}
+
+.main{
+    margin-bottom: 2rem;
+    .btn{
+        &.btn-primary{
+        border-color: $primary-color;
+        color: $primary-color;
+        background-color: lighten($color: $primary-color, $amount: 35);
+        font-size: $font-size-md;  
+        &:hover{
+            border-color: lighten($color: $primary-color, $amount: 35);
+            color: lighten($color: $primary-color, $amount: 35);
+            background-color: $primary-color;
+        }
+        }
+        &.btn-secondary{
+            border-color: $secondary-color;
+            color: $secondary-color;
+            background-color: lighten($color: $secondary-color, $amount: 35);
+            font-size: $font-size-md; 
+            &:hover{
+                border-color: lighten($color: $secondary-color, $amount: 35);
+                color: lighten($color: $secondary-color, $amount: 35);
+                background-color: $secondary-color;
+            }
+            }
+        &:not(.btn-primary){
+            border-radius: 1.25rem;
+            //todos los botones que no son primarios
+        }
+    }
+    p{
+        color: darken($color: $primary-color, $amount: 20);
+    }
+
+    .box-container{
+        width: 100%;
+        @include center-children-box();
+
+        .box{
+            height: 5rem;
+            width: 5rem;
+            background-color: $primary-color;
+            position: relative;
+            &:before, &:after{
+                $size: $font-size-l;
+                position: absolute;
+                font-size: $size;
+                top: calc(50% - ($font-size-l/2));//mitad de font size para encontrar el medio
+            }
+            &:before{
+                content: "💪🏾";
+                left: -3rem;
+            }
+
+            &:after{
+                content:"🦵🏽";
+                left: 3rem;
+            }
+        }
+    }
+}
+

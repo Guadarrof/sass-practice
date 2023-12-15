@@ -1,0 +1,65 @@
+@charset "UTF-8";
+html {
+  font-size: 16px;
+}
+
+h1 {
+  color: rgb(131, 175, 104);
+}
+
+.main {
+  margin-bottom: 2rem;
+}
+.main .btn.btn-primary {
+  border-color: rgb(131, 175, 104);
+  color: rgb(131, 175, 104);
+  background-color: #e3eddd;
+  font-size: 1.5rem;
+}
+.main .btn.btn-primary:hover {
+  border-color: #e3eddd;
+  color: #e3eddd;
+  background-color: rgb(131, 175, 104);
+}
+.main .btn.btn-secondary {
+  border-color: rgb(0, 145, 255);
+  color: rgb(0, 145, 255);
+  background-color: #b3deff;
+  font-size: 1.5rem;
+}
+.main .btn.btn-secondary:hover {
+  border-color: #b3deff;
+  color: #b3deff;
+  background-color: rgb(0, 145, 255);
+}
+.main .btn:not(.btn-primary) {
+  border-radius: 1.25rem;
+}
+.main p {
+  color: #52743d;
+}
+.main .box-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .box-container .box {
+  height: 5rem;
+  width: 5rem;
+  background-color: rgb(131, 175, 104);
+  position: relative;
+}
+.main .box-container .box:before, .main .box-container .box:after {
+  position: absolute;
+  font-size: 2rem;
+  top: calc(50% - 1rem);
+}
+.main .box-container .box:before {
+  content: "💪🏾";
+  left: -3rem;
+}
+.main .box-container .box:after {
+  content: "🦵🏽";
+  left: 3rem;
+}/*# sourceMappingURL=style.css.map */
