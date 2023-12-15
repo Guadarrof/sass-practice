@@ -38,28 +38,29 @@ h1 {
 .main p {
   color: #52743d;
 }
-.main .box-container {
+
+.box-container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main .box-container .box {
+.box-container .box {
   height: 5rem;
   width: 5rem;
   background-color: rgb(131, 175, 104);
   position: relative;
 }
-.main .box-container .box:before, .main .box-container .box:after {
+.box-container .box:before, .box-container .box:after {
   position: absolute;
   font-size: 2rem;
   top: calc(50% - 1rem);
 }
-.main .box-container .box:before {
+.box-container .box:before {
   content: "💪🏾";
   left: -3rem;
 }
-.main .box-container .box:after {
+.box-container .box:after {
   content: "🦵🏽";
   left: 3rem;
 }/*# sourceMappingURL=style.css.map */
